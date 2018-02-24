@@ -1,7 +1,7 @@
 {
   "name": "run-by",
   "description": "Figure out script is run by npm or yarn",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
@@ -17,7 +17,11 @@
     "testit": "node src/index.js"
   },
   "lint-staged": {
-    "*.js": ["cosmo format -f", "cosmo lint -f", "git add"]
+    "*.js": [
+      "cosmo format -f",
+      "cosmo lint -f",
+      "git add"
+    ]
   },
   "eslintConfig": {
     "extends": "cosmo"

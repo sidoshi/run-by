@@ -1,0 +1,41 @@
+{
+  "name": "run-by",
+  "description": "Figure out script is run by npm or yarn",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "cosmo build",
+    "test": "cosmo test",
+    "start": "cosmo start",
+    "format": "cosmo format",
+    "lint": "cosmo lint",
+    "release": "cosmo release",
+    "flow": "flow",
+    "flowtyped": "flow-typed",
+    "precommit": "lint-staged",
+    "testit": "node src/index.js"
+  },
+  "lint-staged": {
+    "*.js": ["cosmo format -f", "cosmo lint -f", "git add"]
+  },
+  "eslintConfig": {
+    "extends": "cosmo"
+  },
+  "author": {
+    "name": "Siddharth Doshi",
+    "email": "mail@sid.sh",
+    "url": "https://sid.sh"
+  },
+  "repository": "https://github.com/doshisid/run-by",
+  "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.40"
+  },
+  "devDependencies": {
+    "cosmo-cli": "0.1.8",
+    "flow-bin": "^0.66.0",
+    "flow-typed": "^2.3.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0"
+  }
+}
